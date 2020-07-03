@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>使用GitHub搭建自己博客 | 无糖加冰</title>
+<title>阿里OSS文件上传无反应 | 无糖加冰</title>
 <link rel="shortcut icon" href="https://xiaohui-wan.github.io/favicon.ico?v=1593788875843">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://xiaohui-wan.github.io/styles/main.css">
@@ -87,70 +87,83 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    使用GitHub搭建自己博客
+                    阿里OSS文件上传无反应
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
                         · 2020-07-03 ·
                     </time>
                     
-                        <a href="https://xiaohui-wan.github.io/S684vfVhq/" class="post-tags">
-                            # GitHub
+                        <a href="https://xiaohui-wan.github.io/ezoSVMer4/" class="post-tags">
+                            # Linux
+                        </a>
+                    
+                        <a href="https://xiaohui-wan.github.io/_qiCWq-yO/" class="post-tags">
+                            # Java
+                        </a>
+                    
+                        <a href="https://xiaohui-wan.github.io/3jvKW15Nd/" class="post-tags">
+                            # OSS
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <h3 id="前言">前言</h3>
+                    <h3 id="问题描述">问题描述</h3>
 <blockquote>
-<p>最近突发奇想，想搭建一个自己的博客来记录工作以及生活中琐事。但是奈何本人忙于工作，热与生活(说白了就是懒，还是个小白)，所以一直没有空闲的时间、好的方式去搭建以及折腾这些事。毕竟要考虑服务器，域名、环境、主题，所以打算使用GitHub搭建自己博客...</p>
+<p>最近使用阿里OSS文件上传遇到一个问题，采用的是oss的文件上传，走到上传那一步时没有任何反应，本地调试可以，服务器部署后无反应，远程debug服务器也是同样结果，翻阅了oss文档，更换最新的SDK，都是没有任何反应.....</p>
 </blockquote>
-<h3 id="开始搭建">开始搭建</h3>
+<h3 id="原因">原因</h3>
 <blockquote>
-<p>首先，注册<a href="https://github.com/" title="点击去注册">GitHub</a>账号</p>
+<p>jar包问题，oss的SDK中封装了许多jar包，其中jdom使用的是1.1版本，项目中有部分工具类引入了jdom的2.0版本，导致代码执行到文件上传<code>ossClient.putObject()</code>这一步时没有任何反应(有的人会直接抛出异常提示jar包冲突)。本人在服务器调试时没有任何错误信息......难受~</p>
 </blockquote>
-<ul>
-<li>输入用户名（Username）</li>
-<li>输入邮箱（Email）</li>
-<li>输入密码（Password）</li>
-<li>去邮箱验证</li>
-</ul>
+<h3 id="敲重点">敲重点</h3>
 <blockquote>
-<p><a href="https://github.com/login/" title="点击去登陆">登陆</a>（已经登陆的话可以忽略）</p>
+<p>当代码执行到 <code>putObject()</code> 的时候出现任何异常，请记住99%是jar包问题导致的（配置问题除外）.</p>
 </blockquote>
-<ul>
-<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593757306087.png" alt="" loading="lazy"></li>
-</ul>
+<h3 id="简述">简述</h3>
 <blockquote>
-<p>创建存储库</p>
+<p>当然，本人只是说了其中一种问题。如果有异常信息还是要以错误信息去排查问题，不过在解决问题时也学了些新的技能（皮毛）。此次只是记录下这个问题防止以后忘记了</p>
+</blockquote>
+<h3 id="解决问题相关涉及">解决问题相关涉及</h3>
+<blockquote>
+<p>springboot项目远程debugger调试</p>
 </blockquote>
 <ul>
-<li>点击右上角的+，选择<strong>New repository</strong>.</li>
-<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593758429283.png" alt="" loading="lazy"></li>
-<li>输入存储库名称（Repository name）</li>
-<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593758997323.png" alt="" loading="lazy"></li>
-<li>点击按钮<strong>Creating repository</strong>进行创建。</li>
-<li>创建成功后，点击<strong>Settings</strong>进入设置,去设置主题样式.</li>
-<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593760448292.png" alt="" loading="lazy"></li>
-<li>进入设置页面后，下拉找到<strong>GitHub Pages</strong>点击<strong>Choose a theme</strong>去设置主题</li>
-<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593760583718.png" alt="" loading="lazy"></li>
-<li>进入后可以看到GitHub提供了不少的主题(应该有十来个吧)，找一个喜欢的，点击<strong>Select theme</strong>选择即可。</li>
-<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593760940833.png" alt="" loading="lazy"></li>
-<li>选择主题后GitHub Pages 就会生成网站，输入你刚才设置的地址，比如我的<code>xiaohui-wan.GitHub.io</code>就可以打开了。（<a href="https://xiaohui-wan.github.io/">https://xiaohui-wan.github.io/</a>）</li>
+<li>
+<p>远程服务器上启动springboot项目的jar包时设置成可以远程调试的参数命令.</p>
+<p><code>java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 xxx.jar</code></p>
+</li>
+<li>
+<p>在IDEA中配置监听</p>
+<ul>
+<li>顶部点击 <strong>Run</strong> 选择 <strong>Edit Configurations...</strong></li>
+<li><img src="https://xiaohui-wan.github.io/post-images/1593785547272.png" alt="" loading="lazy"></li>
+<li>点左上角 + 号，选择 <strong>Remote</strong></li>
+<li><img src="https://xiaohui-wan.github.io/post-images/1593785599703.png" alt="" loading="lazy"></li>
+<li>输入 <strong>Host</strong>（服务器地址） 、<strong>Port</strong> （命令中的端口8000），点击 <strong>OK</strong> 进行保存设置<br>
+注意:个人在实际配置中 <code>Command line arguments for remote JVM:</code>需要配置成 <code>JDK 1.4x</code> 才能够进行远程debug调试。如使用默认JVM配置无法进行操作时，请进行更改配置。</li>
+<li><img src="https://xiaohui-wan.github.io/post-images/1593786016205.png" alt="" loading="lazy"></li>
+<li>启动方式为 <strong>Debug</strong></li>
+<li><img src="https://xiaohui-wan.github.io/post-images/1593788516469.png" alt="" loading="lazy"></li>
+<li>监听成功</li>
+<li><img src="https://xiaohui-wan.github.io/post-images/1593788450094.png" alt="" loading="lazy"></li>
 </ul>
+</li>
+</ul>
+<blockquote>
+<p>OSS 文件上传文件之<a href="https://help.aliyun.com/document_detail/84781.html?spm=a2c4g.11186623.6.805.6da96328OWnHlz/" title="点击跳转文档">简单上传</a></p>
+</blockquote>
 <h3 id="wan小提示">Wan（小提示）</h3>
 <blockquote>
-<ul>
-<li>
-<p>创建存储库名称时建议使用:你的用户名称+<code>.GitHub.io</code>,比如我的存储库名称<code>xiaohui-wan.GitHub.io</code>,在地址栏可以直接输入进行访问</p>
-</li>
-<li>
-<p>准备设置主题样式时注意下绿色框内的信息，这是你的访问地址，如果忘记或者访问失败可以进入此页面查看此地址</p>
-</li>
-<li>
-<p>GitHub提供的主题比较丑，当然也可以自己去折腾一些好看的主题</p>
-</li>
-</ul>
+<p>远程debugger调试启动参数命令的说明</p>
 </blockquote>
+<ul>
+<li><strong>-Xdebug</strong> 是设置远程debugger</li>
+<li><strong>-Xrunjdwp:transport=dt_socket</strong> 是通过socket监听</li>
+<li><strong>address=8000</strong> 是监听的端口号为8000</li>
+<li>监听端口与项目的启动端口号没有任何关系，这个不要搞混了</li>
+<li>远程服务器代码与本地不相同时优先远程服务器代码，代码不一致时可能会有项目挂掉及其他不可知问题，所以建议调试保持远程服务器代码与本地代码一致</li>
+</ul>
 
                 </div>
             </article>
@@ -159,14 +172,14 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://xiaohui-wan.github.io/hello-gridea/" class="post-title gt-a-link">
-                    Hello
+                <a href="https://xiaohui-wan.github.io/github-create-file/" class="post-title gt-a-link">
+                    使用GitHub搭建自己博客
                 </a>
             </div>
         
 
         
-            <span id="/github-create-file/" class="leancloud_visitors" data-flag-title="使用GitHub搭建自己博客">
+            <span id="/java-oss-files-1/" class="leancloud_visitors" data-flag-title="阿里OSS文件上传无反应">
                 <em class="post-meta-item-text">阅读量 </em>
                 <i class="leancloud-visitors-count">0</i>
             </span>

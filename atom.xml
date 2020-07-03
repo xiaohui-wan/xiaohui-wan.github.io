@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xiaohui-wan.github.io</id>
     <title>无糖加冰</title>
-    <updated>2020-07-03T09:24:14.107Z</updated>
+    <updated>2020-07-03T15:08:00.832Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xiaohui-wan.github.io"/>
     <link rel="self" href="https://xiaohui-wan.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://xiaohui-wan.github.io/images/avatar.png</logo>
     <icon>https://xiaohui-wan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 无糖加冰</rights>
+    <entry>
+        <title type="html"><![CDATA[阿里OSS文件上传无反应]]></title>
+        <id>https://xiaohui-wan.github.io/java-oss-files-1/</id>
+        <link href="https://xiaohui-wan.github.io/java-oss-files-1/">
+        </link>
+        <updated>2020-07-03T11:20:41.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用GitHub搭建自己博客]]></title>
         <id>https://xiaohui-wan.github.io/github-create-file/</id>
