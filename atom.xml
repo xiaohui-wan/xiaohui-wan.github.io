@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xiaohui-wan.github.io</id>
     <title>无糖加冰</title>
-    <updated>2020-07-03T05:40:18.040Z</updated>
+    <updated>2020-07-03T08:46:53.538Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xiaohui-wan.github.io"/>
     <link rel="self" href="https://xiaohui-wan.github.io/atom.xml"/>
@@ -11,7 +11,14 @@
     <icon>https://xiaohui-wan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 无糖加冰</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <title type="html"><![CDATA[使用GitHub搭建自己博客]]></title>
+        <id>https://xiaohui-wan.github.io/github-create-file/</id>
+        <link href="https://xiaohui-wan.github.io/github-create-file/">
+        </link>
+        <updated>2020-07-03T06:05:25.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello]]></title>
         <id>https://xiaohui-wan.github.io/hello-gridea/</id>
         <link href="https://xiaohui-wan.github.io/hello-gridea/">
         </link>

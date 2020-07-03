@@ -1,0 +1,238 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>使用GitHub搭建自己博客 | 无糖加冰</title>
+<link rel="shortcut icon" href="https://xiaohui-wan.github.io/favicon.ico?v=1593766010470">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://xiaohui-wan.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            无糖加冰
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="/" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/wan" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    使用GitHub搭建自己博客
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-07-03 ·
+                    </time>
+                    
+                        <a href="https://xiaohui-wan.github.io/S684vfVhq/" class="post-tags">
+                            # GitHub
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <h3 id="前言">前言</h3>
+<blockquote>
+<p>最近突发奇想，想搭建一个自己的博客来记录工作以及生活中琐事。但是奈何本人忙于工作，热与生活(说白了就是懒，还是个小白)，所以一直没有空闲的时间、好的方式去搭建以及折腾这些事。毕竟要考虑服务器，域名、环境、主题，所以打算使用GitHub搭建自己博客...</p>
+</blockquote>
+<h3 id="开始搭建">开始搭建</h3>
+<blockquote>
+<p>首先，注册<a href="https://github.com/%22%E7%82%B9%E5%87%BB%E5%8E%BB%E6%B3%A8%E5%86%8C%22">GitHub</a>账号</p>
+</blockquote>
+<ul>
+<li>输入用户名（Username）</li>
+<li>输入邮箱（Email）</li>
+<li>输入密码（Password）</li>
+<li>去邮箱验证</li>
+</ul>
+<blockquote>
+<p><a href="https://github.com/login/%22%E7%82%B9%E5%87%BB%E5%8E%BB%E7%99%BB%E9%99%86%22">登陆</a>（已经登陆的话可以忽略）</p>
+</blockquote>
+<ul>
+<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593757306087.png" alt="" loading="lazy"></li>
+</ul>
+<blockquote>
+<p>创建存储库</p>
+</blockquote>
+<ul>
+<li>点击右上角的+，选择<strong>New repository</strong>.</li>
+<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593758429283.png" alt="" loading="lazy"></li>
+<li>输入存储库名称（Repository name）</li>
+<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593758997323.png" alt="" loading="lazy"></li>
+<li>点击按钮<strong>Creating repository</strong>进行创建。</li>
+<li>创建成功后，点击<strong>Settings</strong>进入设置,去设置主题样式.</li>
+<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593760448292.png" alt="" loading="lazy"></li>
+<li>进入设置页面后，下拉找到<strong>GitHub Pages</strong>点击<strong>Choose a theme</strong>去设置主题</li>
+<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593760583718.png" alt="" loading="lazy"></li>
+<li>进入后可以看到GitHub提供了不少的主题(应该有十来个吧)，找一个喜欢的，点击<strong>Select theme</strong>选择即可。</li>
+<li>示例图 <img src="https://xiaohui-wan.github.io/post-images/1593760940833.png" alt="" loading="lazy"></li>
+<li>选择主题后GitHub Pages 就会生成网站，输入你刚才设置的地址，比如我的<code>xiaohui-wan.GitHub.io</code>就可以打开了。（https://xiaohui-wan.github.io/）</li>
+</ul>
+<h3 id="wan小提示">Wan（小提示）</h3>
+<blockquote>
+<ul>
+<li>
+<p>创建存储库名称时建议使用:你的用户名称+<code>.GitHub.io</code>,比如我的存储库名称<code>xiaohui-wan.GitHub.io</code>,在地址栏可以直接输入进行访问</p>
+</li>
+<li>
+<p>准备设置主题样式时注意下绿色框内的信息，这是你的访问地址，如果忘记或者访问失败可以进入此页面查看此地址</p>
+</li>
+<li>
+<p>GitHub提供的主题比较丑，当然也可以自己去折腾一些好看的主题</p>
+</li>
+</ul>
+</blockquote>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://xiaohui-wan.github.io/hello-gridea/" class="post-title gt-a-link">
+                    Hello
+                </a>
+            </div>
+        
+
+        
+            <span id="/github-create-file/" class="leancloud_visitors" data-flag-title="使用GitHub搭建自己博客">
+                <em class="post-meta-item-text">阅读量 </em>
+                <i class="leancloud-visitors-count">0</i>
+            </span>
+        
+
+        
+
+        
+            <script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
+
+<style>
+	div#vcomments{
+		width:100%;
+		max-width: 1000px;
+		padding: 2.5%
+	}
+</style>
+
+
+	<div id="vcomments"></div>
+
+<script>
+	new Valine({
+		el: '#vcomments',
+		appId: '',
+		appKey: '',
+		avatar: '',
+		pageSize: 5,
+		recordIp: false,
+		placeholder: 'Just Go Go',
+		visitor: true,
+	});
+</script>
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">顺其自然</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://xiaohui-wan.github.io" target="_blank">HuiGuangHui</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://xiaohui-wan.github.io/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
