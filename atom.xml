@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://xiaohui-wan.github.io</id>
-    <title>无糖加冰</title>
-    <updated>2020-07-03T15:08:00.832Z</updated>
+    <title>小辉-无糖加冰</title>
+    <updated>2020-07-03T16:02:34.245Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://xiaohui-wan.github.io"/>
     <link rel="self" href="https://xiaohui-wan.github.io/atom.xml"/>
     <subtitle>顺其自然</subtitle>
     <logo>https://xiaohui-wan.github.io/images/avatar.png</logo>
     <icon>https://xiaohui-wan.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 无糖加冰</rights>
+    <rights>All rights reserved 2020, 小辉-无糖加冰</rights>
     <entry>
         <title type="html"><![CDATA[阿里OSS文件上传无反应]]></title>
         <id>https://xiaohui-wan.github.io/java-oss-files-1/</id>
